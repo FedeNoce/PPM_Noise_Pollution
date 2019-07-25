@@ -17,7 +17,7 @@ def index(request):
 def graphic(request, id):
     dati_list = []
     for object in Dati.objects.all():
-        if object.sensore == id:
+        if object.sensore.id == id:
             dati_list.append(object)
     template = loader.get_template('Noise_Pollution/graphic.html')
     return render(request, 'Noise_Pollution/graphic.html', {'dati_list': dati_list})
