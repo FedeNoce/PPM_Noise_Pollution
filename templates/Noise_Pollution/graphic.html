@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if dati_list %}
+    <ul>
+    {% for dato in dati_list %}
+        <li>{{ dato.sensore }}{{ dato.date}},{{ dato.time }},{{ dato.analogic_value }},{{ dato.digital_value }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data are available.</p>
+{% endif %}
+</body>
+</body>
+</html>
